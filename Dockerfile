@@ -2,6 +2,7 @@ FROM ubuntu:bionic
 
 RUN apt-get update \
     && apt-get -y upgrade \
+	&& export DEBIAN_FRONTEND=noninteractive \
 	&& apt-get -y install libboost-system1.62.0 libboost-filesystem1.62.0 libboost-program-options1.62.0 \
 	libboost-thread1.62.0 libboost-chrono1.62.0 libdb4.8 libdb4.8++ libssl1.0.0 unzip \
 	libevent-2.1-6 libevent-pthreads-2.1-6 software-properties-common \
